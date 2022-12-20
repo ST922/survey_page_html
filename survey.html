@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Build a survey using HTML and CSS
+        </title>
+        <style>
+            body {
+                background-color: rgb(177, 177, 177);
+                font-family: sans-serif;
+                text-align: center;
+            }
+
+            form {
+                background-color: rgb(255, 255, 255);
+                max-width: 500px;
+                margin: 50px auto;
+                border: 2.5px solid black;
+                padding: 30px 20px;
+                box-shadow: 2px 5px 10px rgb(0, 0, 0);
+            }
+
+            .form-control {
+                text-align: left;
+                margin-bottom: 25px;
+            }
+
+            .form-control Label {
+                display: block;
+                margin-bottom: 25px;
+            }
+
+            .form-control input,
+            .form-control select,
+            .form-control textarea {
+                border: 1px solid rgb(123, 123, 123);
+                border-radius: 2px;
+                font-family: inherit;
+                padding: 10px;
+                display: block;
+                width: 95%;
+            }
+
+            .form-control input[type="radio"],
+            .form-control input[type="checkbox"] {
+                display: inline-block;
+                width: auto;
+            }
+
+            button {
+                background-color: #b2b2b2;
+                border: 1px solid rgb(0, 0, 0);
+                border-radius: 2px;
+                font-family: inherit;
+                font-size: 21px;
+                display: block;
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Genesis Clothing Co Ambassador Form
+        </h1>
+        <!--Create the form-->
+        <form id="form">
+
+            <!--First Name-->
+            <div class="form-control">
+                <label for="first-name" id="label-fname">
+                    First Name
+                </label>
+                <!--Input type text.  What is the user going to input?-->
+                <input type="text"
+                        id="first-name"
+                        placeholder="Enter your first name"/>
+            </div>
+
+            <!--Last Name-->
+            <div class="form-control">
+                <label for="last-name" id="label-lname">
+                    Last Name
+                </label>
+                <input type="text"
+                        id="last-name"
+                        placeholder="Enter your last name"/>
+            </div>
+
+            <!--Username-->
+            <div class="form-control">
+                <label for="username" id="label-username">
+                    Username
+                </label>
+                <input type="text"
+                        id="username"
+                        placeholder="Enter your username"/>
+            </div>
+            
+            <!--Password-->
+            <div class="form-control">
+                <label for="password" id="label-password">
+                    Password
+                </label>
+                <input type="text"
+                        id="password"
+                        placeholder="Enter your password"/>
+            </div>
+
+            <!--Email-->
+            <div class="form-control">
+                <label for="email" id="label-email">
+                    Email
+                </label>
+                <input type="email"
+                        id="email"
+                        placeholder="Enter your email"/>
+            </div>
+
+            <!--Sex-->
+            <div class="form-control">
+                <label for="sex" id="label-sex">
+                    Sex
+                </label>
+                <input type="text"
+                        id="sex"
+                        placeholder="Male or female?"/>
+            </div>
+
+            <!--Age-->
+            <div class="form-control">
+                <label for="age" id="label-age">
+                    Age
+                </label>
+                <input type="text"
+                        id="age"
+                        placeholder="Enter your age"/>
+            </div>
+
+            <!--Dropdown Menu-->
+            <!--Role-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+                    Which of the following best describes you?
+                </label>
+                <select name="role" id="role">
+                    <option value="student">
+                        Student
+                    </option>
+                    <option value="intern">
+                        Intern
+                    </option>
+                    <option value="professional">
+                        Professional
+                    </option>
+                    <option value="other">
+                        Other
+                    </option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label>
+                    Are you a Christian?
+                </label>
+                <label for="christian-1">
+                    <input type="radio"
+                            id="christian-1"
+                            value="christian">
+                    Yes
+                </label>
+                <label for="christian-2">
+                    <input type="radio"
+                            id="christian-2"
+                            value="not-christian">
+                    No           
+                </label>
+            </div>
+            
+            <!--Social Media-->
+            <div class="form-control">
+                <label>What social media are you currently on?</label>
+                <small>(select all that apply)</small>
+                <!--Input type checkbox-->
+                    <label for="input-1">
+                        <input type="checkbox"
+                                name="input">Instagram
+                    </label>
+                    <label for="input-2">
+                        <input type="checkbox"
+                                name="input">Facebook
+                    </label>
+                    <label for="input-3">
+                        <input type="checkbox"
+                                name="input">Twitter
+                    </label>
+                    <label for="input-4">
+                        <input type="checkbox"
+                                name="input">BeReal
+                    </label>
+                    <label for="input-5">
+                        <input type="checkbox"
+                                name="input">Snapchat
+                    </label>
+                    <label for="input-6">
+                        <input type="checkbox"
+                                name="input">LinkedIn
+                    </label>
+                    <label for="input-7">
+                        <input type="checkbox"
+                                name="input">Other
+                    </label>
+            </div>
+
+            <!--Comments-->
+            <div class="form-control">
+                <label for="comment">
+                    Please feel free to leave any additional comments:
+                </label>
+                <textarea name="comment" id="comment"
+                            placeholder="Enter your comment here!">
+                </textarea>
+            </div>
+
+            <!--Submit the form-->
+            <button type="submit" value="submit">
+                Submit
+            </button>
+        </form>
+    </body>
+</html>
